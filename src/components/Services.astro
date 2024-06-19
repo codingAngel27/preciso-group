@@ -1,0 +1,46 @@
+---
+const PROJECTS = [
+    {
+        title: "INSTALACIONES ELÉCTRICAS",
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        link: "#",
+        github: "#",
+        image: "/imagenes/carrousel/imagenes-c-01.jpg",
+    },
+    {
+        title: "MANTENIMIENTO DE TABLEROS ELÉCTRICOS",
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        link: "#",
+        github: "#",
+        image: "/imagenes/carrousel/imagenes-c-02.jpg",
+    },
+    {
+        title: "INSTALACIÓN Y MANTENIMIENTO",
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        github: "#",
+        image: "/imagenes/carrousel/imagenes-c-03.jpg",
+    },
+];
+---
+<div class="flex flex-wrap justify-center gap-x-10"> 
+    {
+        PROJECTS.map(({ title, description, github, image }) => (
+        <article class="max-w-sm rounded overflow-hidden mx-2 my-4 h-[150] flex flex-col justify-between shadow-2xl shadow-white/10">
+        <img class="w-full hover:scale-105" src={image} alt="Proyectos AngelDev">
+        <div class="px-6 py-4 mb-auto">
+          <h3 class="text-black font-bold text-xl mb-2">{title}</h3>
+          <p class="text-slate-700 text-base text-balance line-clamp-5 max-lg:hidden">
+            {description}
+          </p>
+        </div>
+        <a href={github}  rel="noopener noreferrer" target="_blank" class="bg-blue-500 text-white py-2 px-4 rounded-full mx-2 my-2 hover:bg-blue-600 transition-colors duration-300 text-center">
+            Saber Mas
+        </a>
+    </article>
+        ))
+    }
+    </div>
+    

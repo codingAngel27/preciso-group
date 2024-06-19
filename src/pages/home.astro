@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import NavBar from '../components/NavBar.astro';
+import Gallery from '../components/Gallery.astro';
+import Carrousel from '../components/Carrousel.astro';
+import Services from '../components/Services.astro';
+import Services2 from '../components/Services2.astro';
+import Blog from '../components/Blog.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Nosotros from '../components/Nosotros.astro';
+---
+
+<Layout title="Preciso Group">
+	<main class="px-4 mx-auto">
+		<NavBar />
+		<!-- <SectionHome />-->
+		<SectionContainer id="home" class="py-35 flex justify-center flex-col items-center z-0">
+		<Carrousel />
+		</SectionContainer>
+		<SectionContainer id="servicios" class="flex flex-col items-center justify-center mx-auto py-44 h-vh flex-wrap lg:py-35 lg:mt-20">
+			<h2 class="text-2xl font-extrabold mb-6 flex gap-x-3 items-center justify-center text-degradado">
+				Nuestros Servicios
+			</h2>
+			<Services />
+		</SectionContainer>
+		
+		<SectionContainer id="servicios" class="flex flex-col items-center justify-center mx-auto sm:py-44 h-vh flex-wrap bg-[#5BBCFF] lg:py-0 lg:mt-20">
+			<Services2 />
+		</SectionContainer>
+		
+		<SectionContainer id="nosotros" class="flex flex-col items-center mx-auto py-44 h-vh flex-wrap lg:py-0 lg:mt-20">
+			<Nosotros />
+		</SectionContainer>
+		
+		<SectionContainer id="galeria" class="py-35 flex justify-center flex-col items-center h-svh lg:py-35 lg:mt-20">
+			<h2 class="text-2xl font-extrabold mb-6 flex gap-x-3 items-center justify-center text-degradado">
+				Galeria
+			</h2>
+			<Gallery />
+		</SectionContainer>
+		
+		<SectionContainer id="blog" class="flex flex-col items-center mx-auto py-44 h-vh flex-wrap lg:py-0 lg:mt-20">
+			<Blog />
+		</SectionContainer>
+        <Footer />
+	</main>
+</Layout>
